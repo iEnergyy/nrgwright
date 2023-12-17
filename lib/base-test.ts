@@ -1,0 +1,12 @@
+import { test as baseTest } from '@playwright/test';
+import { PlaywrightDevPage } from '../page-objects/example-page';
+
+const test = baseTest.extend<{
+  playwrightDevPage: PlaywrightDevPage;
+}>({
+  playwrightDevPage: async ({ page, context }, use) => {
+    await use(new PlaywrightDevPage(page, context));
+  },
+});
+
+export default test;
