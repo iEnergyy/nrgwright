@@ -1,5 +1,5 @@
 import { test as baseTest } from '@playwright/test';
-import { PlaywrightDevPage } from '../page-objects/example-page';
+import { PlaywrightDevPage } from '@pages/example-page';
 
 const test = baseTest.extend<{
   playwrightDevPage: PlaywrightDevPage;

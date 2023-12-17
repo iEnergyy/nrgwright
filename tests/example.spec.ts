@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import { allure } from 'allure-playwright';
-import test from '../lib/base-test';
+import test from '@lib/base-test';
 
 test.describe('Test Suite 1', () => {
   test('TS1TC1: getting started should contain table of contents', async ({
