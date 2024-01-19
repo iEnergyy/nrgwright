@@ -6,7 +6,9 @@ test.describe('Test Suite 1', () => {
   test('TS1TC1: getting started should contain table of contents', async ({
     playwrightDevPage,
   }) => {
-    await allure.suite('Web');
+    await allure.suite('Allure Suite');
+    await allure.parentSuite('Allure Parent Suite');
+    await allure.subSuite('Allure Sub Suite');
     await allure.tag('Smoke test');
     await allure.label('labelName', 'labelValue');
     await allure.link('https://playwright.dev', 'playwright-site'); // link with name
