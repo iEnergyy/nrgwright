@@ -4,7 +4,7 @@ import test from '@lib/base-test';
 
 test.describe('Test Suite 1', () => {
   test('TS1TC1: getting started should contain table of contents', async ({
-    playwrightDevPage,
+    playwrightDevPageA,
   }) => {
     await allure.suite('Allure Suite');
     await allure.parentSuite('Allure Parent Suite');
@@ -19,12 +19,12 @@ test.describe('Test Suite 1', () => {
     await allure.id('420');
 
     await test.step('Navigation', async () => {
-      await playwrightDevPage.goto();
-      await playwrightDevPage.getStarted();
+      await playwrightDevPageA.goto();
+      await playwrightDevPageA.getStarted();
     });
 
     await test.step('Verification', async () => {
-      await expect(playwrightDevPage.tocList).toHaveText([
+      await expect(playwrightDevPageA.tocList).toHaveText([
         `How to install Playwright`,
         `What's Installed`,
         `How to run the example test`,
@@ -38,27 +38,27 @@ test.describe('Test Suite 1', () => {
   });
 
   test('TS1TC2: should show Page Object Model article', async ({
-    playwrightDevPage,
+    playwrightDevPageA,
   }) => {
     await test.step('Validation on TSC2', async () => {
-      await playwrightDevPage.goto();
-      await playwrightDevPage.pageObjectModel();
-      await playwrightDevPage.verifyArticle();
+      await playwrightDevPageA.goto();
+      await playwrightDevPageA.pageObjectModel();
+      await playwrightDevPageA.verifyArticle();
     });
   });
 });
 
 test.describe('Test Suite 2', () => {
   test('TS2TC1: getting started should contain table of contents', async ({
-    playwrightDevPage,
+    playwrightDevPageA,
   }) => {
     await test.step('Navigation', async () => {
-      await playwrightDevPage.goto();
-      await playwrightDevPage.getStarted();
+      await playwrightDevPageA.goto();
+      await playwrightDevPageA.getStarted();
     });
 
     await test.step('Verification', async () => {
-      await expect(playwrightDevPage.tocList).toHaveText([
+      await expect(playwrightDevPageA.tocList).toHaveText([
         `How to install Playwright`,
         `What's Installed`,
         `How to run the example test`,
@@ -72,12 +72,18 @@ test.describe('Test Suite 2', () => {
   });
 
   test('TS2TC2: should show Page Object Model article', async ({
-    playwrightDevPage,
+    playwrightDevPageA,
+    playwrightDevPageB,
   }) => {
     await test.step('Validation on TSC2', async () => {
-      await playwrightDevPage.goto();
-      await playwrightDevPage.pageObjectModel();
-      await playwrightDevPage.verifyArticle();
+      await playwrightDevPageA.goto();
+      await playwrightDevPageA.pageObjectModel();
+      await playwrightDevPageA.verifyArticle();
+    });
+    await test.step('Validation on TSC2 on 2nd browser', async () => {
+      await playwrightDevPageB.goto();
+      await playwrightDevPageB.pageObjectModel();
+      await playwrightDevPageB.verifyArticle();
     });
   });
 });
