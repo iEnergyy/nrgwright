@@ -1,23 +1,14 @@
-// import { test as baseTest } from '@playwright/test';
-// import { PlaywrightDevPage } from '@pages/example-page';
-
-// const test = baseTest.extend<{
-//   playwrightDevPage: PlaywrightDevPage;
-// }>({
-//   playwrightDevPage: async ({ page, context }, use) => {
-//     await use(new PlaywrightDevPage(page, context));
-//   },
-// });
-
-// export default test;
-
-import { test as baseTest, BrowserContext, Browser } from '@playwright/test';
+import { test as baseTest, BrowserContext, Page } from '@playwright/test';
 import { PlaywrightDevPage } from '@pages/example-page';
+import { PlaywrightSecondDevPage } from '@pages/example-second-page';
 
 const test = baseTest.extend<{
   browserA: BrowserContext;
   browserB: BrowserContext;
+  browserAPage: Page;
+  browserBPage: Page;
   playwrightDevPageA: PlaywrightDevPage;
+  playwrightSecondDevPageA: PlaywrightSecondDevPage;
   playwrightDevPageB: PlaywrightDevPage;
 }>({
   browserA: async ({ browser }, use) => {
@@ -28,13 +19,22 @@ const test = baseTest.extend<{
     const context = await browser.newContext();
     await use(context);
   },
-  playwrightDevPageA: async ({ browserA }, use) => {
+  browserAPage: async ({ browserA }, use) => {
     const page = await browserA.newPage();
-    await use(new PlaywrightDevPage(page, browserA));
+    await use(page);
   },
-  playwrightDevPageB: async ({ browserB }, use) => {
+  browserBPage: async ({ browserB }, use) => {
     const page = await browserB.newPage();
-    await use(new PlaywrightDevPage(page, browserB));
+    await use(page);
+  },
+  playwrightDevPageA: async ({ browserA, browserAPage }, use) => {
+    await use(new PlaywrightDevPage(browserAPage, browserA));
+  },
+  playwrightSecondDevPageA: async ({ browserA, browserAPage }, use) => {
+    await use(new PlaywrightDevPage(browserAPage, browserA));
+  },
+  playwrightDevPageB: async ({ browserB, browserBPage }, use) => {
+    await use(new PlaywrightDevPage(browserBPage, browserB));
   },
 });
 

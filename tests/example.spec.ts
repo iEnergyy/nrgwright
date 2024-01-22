@@ -55,6 +55,7 @@ test.describe('Test Suite 2', () => {
     await test.step('Navigation', async () => {
       await playwrightDevPageA.goto();
       await playwrightDevPageA.getStarted();
+      await playwrightDevPageA.useOtherPageObject();
     });
 
     await test.step('Verification', async () => {

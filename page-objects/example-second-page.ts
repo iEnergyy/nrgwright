@@ -4,9 +4,8 @@ import {
   type Locator,
   type Page,
 } from '@playwright/test';
-import { PlaywrightSecondDevPage } from './example-second-page';
 
-export class PlaywrightDevPage {
+export class PlaywrightSecondDevPage {
   readonly page: Page;
   readonly context: BrowserContext;
   readonly getStartedLink: Locator;
@@ -14,7 +13,6 @@ export class PlaywrightDevPage {
   readonly pomLink: Locator;
   readonly tocList: Locator;
   readonly article: Locator;
-  private otherPage: PlaywrightSecondDevPage;
 
   constructor(page: Page, context: BrowserContext) {
     this.page = page;
@@ -30,7 +28,6 @@ export class PlaywrightDevPage {
       });
     this.tocList = page.locator('article div.markdown ul > li > a');
     this.article = page.locator('article');
-    this.otherPage = new PlaywrightSecondDevPage(this.page, this.context);
   }
 
   async goto() {
@@ -51,9 +48,5 @@ export class PlaywrightDevPage {
     await expect(this.article).toContainText(
       'Page Object Model is a common pattern',
     );
-  }
-
-  async useOtherPageObject() {
-    await expect(this.otherPage.gettingStartedHeader).toBeVisible();
   }
 }
