@@ -18,7 +18,6 @@ export class PlaywrightDevPage {
 
   constructor(page: Page, context: BrowserContext) {
     this.page = page;
-    this.context = context;
     this.getStartedLink = page.locator('a', { hasText: 'Get started' });
     this.gettingStartedHeader = page.locator('h1', { hasText: 'Installation' });
     this.pomLink = page
@@ -30,7 +29,7 @@ export class PlaywrightDevPage {
       });
     this.tocList = page.locator('article div.markdown ul > li > a');
     this.article = page.locator('article');
-    this.otherPage = new PlaywrightSecondDevPage(this.page, this.context);
+    this.otherPage = new PlaywrightSecondDevPage(this.page, context);
   }
 
   async goto() {
