@@ -46,7 +46,7 @@ export class PlaywrightSecondDevPage {
 
   async verifyArticle() {
     await expect(this.article).toContainText(
-      'Page Object Model is a common pattern',
+      'Page Object Model is a commonn pattern',
     );
   }
 }
