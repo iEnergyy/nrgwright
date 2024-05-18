@@ -18,7 +18,7 @@ test.describe('Test Suite 1', () => {
     );
     await allure.id('420');
 
-    await test.step('Navigation', async () => {
+    await test.step('Navigation get started', async () => {
       await playwrightDevPageA.goto();
       await playwrightDevPageA.getStarted();
     });
