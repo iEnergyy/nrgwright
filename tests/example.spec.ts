@@ -60,7 +60,7 @@ test.describe('Test Suite 2', () => {
 
     await test.step('Verification', async () => {
       await expect(playwrightDevPageA.tocList).toHaveText([
-        `How to install Playwright`,
+        `How to install Plywright`,
         `What's Installed`,
         `How to run the example test`,
         `How to open the HTML test report`,
