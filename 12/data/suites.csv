@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jul 12 04:57:36 GMT 2024","Fri Jul 12 04:57:42 GMT 2024","5312","Web","example.spec.ts","Test Suite 2","","","TS2TC2: should show Page Object Model article",""
+"passed","Fri Jul 12 04:57:36 GMT 2024","Fri Jul 12 04:57:41 GMT 2024","4976","Allure Parent Suite","Allure Suite","Allure Sub Suite","","","TS1TC1: getting started should contain table of contents",""
+"passed","Fri Jul 12 04:57:36 GMT 2024","Fri Jul 12 04:57:41 GMT 2024","4396","Web","example.spec.ts","Test Suite 1","","","TS1TC2: should show Page Object Model article",""
+"passed","Fri Jul 12 04:57:36 GMT 2024","Fri Jul 12 04:57:40 GMT 2024","3862","Web","example.spec.ts","Test Suite 2","","","TS2TC1: getting started should contain table of contents",""
