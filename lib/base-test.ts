@@ -41,9 +41,9 @@ const test = baseTest.extend<{
   credentials: async ({ }, use) => {
     // Use workerIndex as a unique identifier for each worker.
     const fetchUsername =
-      await axios.get(`https://rickandmortyapi.com/api/character/${Math.floor(Math.random() * 70) + 1}`)
+      await axios.get('http://localhost:3000/random-user')
         .then(response => {
-          return response.data.name;
+          return response.data.username;
         })
         .catch(function (error) {
           // handle error
