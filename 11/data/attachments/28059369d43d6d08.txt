@@ -1,0 +1,3 @@
+credentials setup - setup fixture from Logan95-2
+text from test step Logan95-2
+credentials cleanup - teardown fixture Logan95-2

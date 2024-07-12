@@ -1,0 +1,9 @@
+credentials setup - setup fixture from Sabryna_Schimmel-0
+text from test step Sabryna_Schimmel-0 1
+text from test step Sabryna_Schimmel-0 2
+text from test step Sabryna_Schimmel-0 3
+text from test step Sabryna_Schimmel-0 4
+text from test step Sabryna_Schimmel-0 5
+text from test step Sabryna_Schimmel-0 6
+text from test step Sabryna_Schimmel-0 7
+credentials cleanup - teardown fixture Sabryna_Schimmel-0

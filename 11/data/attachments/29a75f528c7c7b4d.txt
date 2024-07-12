@@ -1,0 +1,3 @@
+credentials setup - setup fixture from Angus_Gottlieb45-3
+text from test step Angus_Gottlieb45-3
+credentials cleanup - teardown fixture Angus_Gottlieb45-3
