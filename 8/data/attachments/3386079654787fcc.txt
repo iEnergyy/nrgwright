@@ -1,0 +1,3 @@
+credentials setup - setup fixture from Beebo-0
+text from test step Beebo-0
+credentials cleanup - teardown fixture Beebo-0

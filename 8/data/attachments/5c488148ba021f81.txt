@@ -1,0 +1,9 @@
+credentials setup - setup fixture from Abadango Cluster Princess-0
+text from test step Abadango Cluster Princess-0 1
+text from test step Abadango Cluster Princess-0 2
+text from test step Abadango Cluster Princess-0 3
+text from test step Abadango Cluster Princess-0 4
+text from test step Abadango Cluster Princess-0 5
+text from test step Abadango Cluster Princess-0 6
+text from test step Abadango Cluster Princess-0 7
+credentials cleanup - teardown fixture Abadango Cluster Princess-0
