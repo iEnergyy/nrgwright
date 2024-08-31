@@ -3,7 +3,7 @@ import { allure } from 'allure-playwright';
 import test from '@lib/base-test';
 
 test.describe('Test Suite 1', () => {
-  test('TS1TC1: getting started should contain table of contents', async ({
+  test('ID-1: getting started should contain table of contents', async ({
     playwrightDevPageA,
     credentials
   }) => {
@@ -102,7 +102,7 @@ test.describe('Test Suite 1', () => {
     });
   });
 
-  test('TS1TC2: should show Page Object Model article', async ({
+  test('ID-2 : should show Page Object Model article', async ({
     playwrightDevPageA,
     // credentials
   }) => {
@@ -119,7 +119,7 @@ test.describe('Test Suite 1', () => {
 });
 
 test.describe('Test Suite 2', () => {
-  test('TS2TC1: getting started should contain table of contents', async ({
+  test('ID-3, ID-4: getting started should contain table of contents', async ({
     playwrightDevPageA,
     credentials
   }) => {
@@ -147,7 +147,7 @@ test.describe('Test Suite 2', () => {
     });
   });
 
-  test('TS2TC2: should show Page Object Model article', async ({
+  test('ID-5,ID-6 : should show Page Object Model article', async ({
     playwrightDevPageA,
     playwrightDevPageB,
     credentials
