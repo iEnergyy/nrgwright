@@ -1,10 +1,10 @@
 import { expect } from '@playwright/test';
 import { allure } from 'allure-playwright';
 import test from '@lib/base-test';
-import { extractTestIDs } from '@lib/utils';
 
 test.describe('Test Suite 1', () => {
   test('ID-1: getting started should contain table of contents', async ({
+    testRunnerManager,
     playwrightDevPageA,
     credentials
   }) => {
@@ -104,6 +104,7 @@ test.describe('Test Suite 1', () => {
   });
 
   test('ID-2 : should show Page Object Model article', async ({
+    testRunnerManager,
     playwrightDevPageA,
     // credentials
   }) => {
@@ -121,6 +122,7 @@ test.describe('Test Suite 1', () => {
 
 test.describe('Test Suite 2', () => {
   test('ID-3, ID-4: getting started should contain table of contents', async ({
+    testRunnerManager,
     playwrightDevPageA,
     credentials
   }) => {
@@ -149,11 +151,11 @@ test.describe('Test Suite 2', () => {
   });
 
   test('ID-5,ID-6 : should show Page Object Model article', async ({
+    testRunnerManager,
     playwrightDevPageA,
     playwrightDevPageB,
     credentials,
-  }, testInfo) => {
-    console.log(extractTestIDs(testInfo.title));
+  }) => {
     await test.step('Validation on TSC2', async () => {
       await playwrightDevPageA.goto();
       await playwrightDevPageA.pageObjectModel();

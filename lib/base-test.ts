@@ -2,6 +2,7 @@ import { test as baseTest, BrowserContext, Page } from '@playwright/test';
 import { PlaywrightDevPage } from '@pages/example-page';
 import { PlaywrightSecondDevPage } from '@pages/example-second-page';
 import axios from 'axios';
+import { areTestsEnabled, extractTestIDs } from './utils';
 
 const test = baseTest.extend<{
   browserA: BrowserContext;
@@ -12,6 +13,7 @@ const test = baseTest.extend<{
   playwrightSecondDevPageA: PlaywrightSecondDevPage;
   playwrightDevPageB: PlaywrightDevPage;
   credentials: string;
+  testRunnerManager: void;
 }>({
   browserA: async ({ browser }, use) => {
     const context = await browser.newContext();
@@ -56,6 +58,18 @@ const test = baseTest.extend<{
     // Clean up after the tests are done.
     console.log(`credentials cleanup - teardown fixture ${userName}`);
   },
+  testRunnerManager: [async ({ }, use, testInfo) => {
+    const testIds = extractTestIDs(testInfo.title);
+    const enabledStatuses = await areTestsEnabled(testIds);
+
+    if (enabledStatuses.some(status => !status)) {
+      console.log(`Skipping test ${testInfo.title} due to ${testIds}`);
+      test.skip();
+    } else {
+      console.log(`Running tests': ${testIds}`);
+    }
+    await use();
+  }, { scope: 'test' }],
 });
 
 export default test;
