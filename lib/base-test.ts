@@ -60,6 +60,7 @@ const test = baseTest.extend<{
   },
   testRunnerManager: [async ({ }, use, testInfo) => {
     const testIds = extractTestIDs(testInfo.title);
+    // TODO: add test if testIds is not on the backend.
     const enabledStatuses = await areTestsEnabled(testIds);
 
     if (enabledStatuses.some(status => !status)) {
@@ -69,6 +70,9 @@ const test = baseTest.extend<{
       console.log(`Running tests': ${testIds}`);
     }
     await use();
+    const durationSecs = testInfo.duration / 1000;
+    console.log(`Test ${testIds} is done in ${durationSecs} seconds`);
+    // TODO: push test durations to backend
   }, { scope: 'test' }],
 });
 
