@@ -6,6 +6,7 @@ const tests = {
   5: { id: 'ID-5', isEnabled: false },
   6: { id: 'ID-6', isEnabled: true },
 };
+// TODO: add test names to the backend.
 
 
 export function extractTestIDs(description: string): string[] {
@@ -15,6 +16,7 @@ export function extractTestIDs(description: string): string[] {
   const matches = description.match(regex);
   // If there are no matches, return an empty array
   return matches || [];
+  // TODO: add test names to the backend after :
 }
 
 export async function areTestsEnabled(testIds: string[]): Promise<boolean[]> {
