@@ -42,7 +42,11 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'Web',
+      name: 'Web-1',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'Web-2',
       use: { ...devices['Desktop Chrome'] },
     },
     // {
