@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "test:with-metrics": "npx playwright test --reporter=lib/file-metrics-reporter.ts",
+    "send-metrics": "node lib/send-metrics-to-grafana.js",
+    "analyze-metrics": "node lib/analyze-metrics.js",
     "allure:report": "npx allure serve allure-results",
     "server": "node server/app.js"
   },
@@ -20,6 +23,8 @@
     "allure-commandline": "^2.25.0",
     "allure-playwright": "^2.10.0",
     "axios": "^1.7.2",
-    "express": "^4.19.2"
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "prom-client": "^15.1.3"
   }
 }
