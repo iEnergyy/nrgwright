@@ -1,0 +1,90 @@
+[
+  {
+    "session_id": "session_1753492776294_rw081uopb",
+    "start_time": 1753492776294,
+    "end_time": 1753492788884,
+    "total_tests": 1,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 5.105,
+    "date": "2025-07-26"
+  },
+  {
+    "session_id": "session_1753492803201_xw65qlq4p",
+    "start_time": 1753492803201,
+    "end_time": 1753492817819,
+    "total_tests": 1,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 6.356,
+    "date": "2025-07-26"
+  },
+  {
+    "session_id": "session_1753493213661_z9yoym4b6",
+    "start_time": 1753493213661,
+    "end_time": 1753493230887,
+    "total_tests": 1,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 9.748,
+    "date": "2025-07-26"
+  },
+  {
+    "session_id": "session_1753493461682_9ero8ni71",
+    "start_time": 1753493461681,
+    "end_time": 1753493478561,
+    "total_tests": 1,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 8.595,
+    "date": "2025-07-26"
+  },
+  {
+    "session_id": "session_1753493485767_83aly2leq",
+    "start_time": 1753493485767,
+    "end_time": 1753493503466,
+    "total_tests": 1,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 9.372,
+    "date": "2025-07-26"
+  },
+  {
+    "session_id": "session_1753493510837_864so96r9",
+    "start_time": 1753493510837,
+    "end_time": 1753493526656,
+    "total_tests": 2,
+    "passed_tests": 2,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 13.257,
+    "date": "2025-07-26"
+  },
+  {
+    "session_id": "session_1753493597306_xx9olzwkp",
+    "start_time": 1753493597306,
+    "end_time": 1753493611585,
+    "total_tests": 2,
+    "passed_tests": 2,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 12.428,
+    "date": "2025-07-26"
+  },
+  {
+    "session_id": "session_1753493696817_8wwep7aw7",
+    "start_time": 1753493696817,
+    "end_time": 1753493780829,
+    "total_tests": 108,
+    "passed_tests": 108,
+    "failed_tests": 0,
+    "skipped_tests": 0,
+    "total_duration": 561.5650000000003,
+    "date": "2025-07-26"
+  }
+]

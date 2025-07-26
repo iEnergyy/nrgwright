@@ -17,10 +17,24 @@ interface TestMetric {
   date: string;
 }
 
+interface RunSession {
+  session_id: string;
+  start_time: number;
+  end_time: number;
+  total_tests: number;
+  passed_tests: number;
+  failed_tests: number;
+  skipped_tests: number;
+  total_duration: number;
+  date: string;
+}
+
 class FileMetricsReporter implements Reporter {
   private metrics: TestMetric[] = [];
   private metricsDir: string;
   private metricsFile: string;
+  private sessionStartTime: number;
+  private sessionId: string;
 
   constructor() {
     this.metricsDir = path.join(process.cwd(), 'metrics');
@@ -30,6 +44,10 @@ class FileMetricsReporter implements Reporter {
     if (!fs.existsSync(this.metricsDir)) {
       fs.mkdirSync(this.metricsDir, { recursive: true });
     }
+
+    // Initialize session tracking
+    this.sessionStartTime = Date.now();
+    this.sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
   onTestEnd(test: TestCase, result: TestResult) {
@@ -55,6 +73,9 @@ class FileMetricsReporter implements Reporter {
     // Save metrics to file
     this.saveMetricsToFile();
 
+    // Save run session data
+    this.saveRunSession();
+
     // Display summary
     this.displaySummary();
   }
@@ -77,6 +98,41 @@ class FileMetricsReporter implements Reporter {
       console.log(`💾 Metrics saved to: ${this.metricsFile}`);
     } catch (error) {
       console.error('❌ Failed to save metrics:', error);
+    }
+  }
+
+  private saveRunSession() {
+    try {
+      const sessionData: RunSession = {
+        session_id: this.sessionId,
+        start_time: this.sessionStartTime,
+        end_time: Date.now(),
+        total_tests: this.metrics.length,
+        passed_tests: this.metrics.filter(m => m.status === 'passed').length,
+        failed_tests: this.metrics.filter(m => m.status === 'failed').length,
+        skipped_tests: this.metrics.filter(m => m.status === 'skipped').length,
+        total_duration: this.metrics.reduce((sum, m) => sum + m.duration_seconds, 0),
+        date: new Date().toISOString().split('T')[0]
+      };
+
+      const sessionsFile = path.join(this.metricsDir, `run-sessions-${new Date().toISOString().split('T')[0]}.json`);
+
+      // Load existing sessions or create new array
+      let existingSessions: RunSession[] = [];
+      if (fs.existsSync(sessionsFile)) {
+        const fileContent = fs.readFileSync(sessionsFile, 'utf8');
+        existingSessions = JSON.parse(fileContent);
+      }
+
+      // Add new session
+      existingSessions.push(sessionData);
+
+      // Save to file
+      fs.writeFileSync(sessionsFile, JSON.stringify(existingSessions, null, 2));
+
+      console.log(`💾 Run session saved to: ${sessionsFile}`);
+    } catch (error) {
+      console.error('❌ Failed to save run session:', error);
     }
   }
 

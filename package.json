@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npx playwright test",
     "test:with-metrics": "npx playwright test --reporter=lib/file-metrics-reporter.ts",
+    "test:auto-send": "npx playwright test --reporter=lib/auto-send-metrics-reporter.ts",
     "send-metrics": "node lib/send-metrics-to-grafana.js",
     "analyze-metrics": "node lib/analyze-metrics.js",
     "test-grafana": "node lib/test-grafana-connection.js",

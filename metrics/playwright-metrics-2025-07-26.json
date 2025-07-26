@@ -1,0 +1,1192 @@
+[
+  {
+    "test_name": "API001: Test user authentication endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 8.076,
+    "retries": 0,
+    "timestamp": 1753492529115,
+    "date": "2025-07-26T01:15:29.115Z"
+  },
+  {
+    "test_name": "API001: Test user authentication endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 8.158,
+    "retries": 0,
+    "timestamp": 1753492529198,
+    "date": "2025-07-26T01:15:29.198Z"
+  },
+  {
+    "test_name": "API001: Test user authentication endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.105,
+    "retries": 0,
+    "timestamp": 1753492788376,
+    "date": "2025-07-26T01:19:48.376Z"
+  },
+  {
+    "test_name": "API002: Test user registration endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.356,
+    "retries": 0,
+    "timestamp": 1753492816514,
+    "date": "2025-07-26T01:20:16.514Z"
+  },
+  {
+    "test_name": "API003: Test product listing endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 9.748,
+    "retries": 0,
+    "timestamp": 1753493230268,
+    "date": "2025-07-26T01:27:10.268Z"
+  },
+  {
+    "test_name": "API004: Test order creation endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 8.595,
+    "retries": 0,
+    "timestamp": 1753493477247,
+    "date": "2025-07-26T01:31:17.247Z"
+  },
+  {
+    "test_name": "API005: Test payment processing endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 9.372,
+    "retries": 0,
+    "timestamp": 1753493502115,
+    "date": "2025-07-26T01:31:42.115Z"
+  },
+  {
+    "test_name": "SEC001: Test SQL injection vulnerability",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.531,
+    "retries": 0,
+    "timestamp": 1753493523369,
+    "date": "2025-07-26T01:32:03.369Z"
+  },
+  {
+    "test_name": "EC001: Browse product catalog",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.726,
+    "retries": 0,
+    "timestamp": 1753493525370,
+    "date": "2025-07-26T01:32:05.370Z"
+  },
+  {
+    "test_name": "SEC002: Test cross-site scripting (XSS)",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.554,
+    "retries": 0,
+    "timestamp": 1753493609728,
+    "date": "2025-07-26T01:33:29.728Z"
+  },
+  {
+    "test_name": "EC002: Add product to shopping cart",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.874,
+    "retries": 0,
+    "timestamp": 1753493611036,
+    "date": "2025-07-26T01:33:31.036Z"
+  },
+  {
+    "test_name": "API001: Test user authentication endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.175,
+    "retries": 0,
+    "timestamp": 1753493709094,
+    "date": "2025-07-26T01:35:09.094Z"
+  },
+  {
+    "test_name": "API006: Test search functionality endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.698,
+    "retries": 0,
+    "timestamp": 1753493709664,
+    "date": "2025-07-26T01:35:09.664Z"
+  },
+  {
+    "test_name": "API008: Test notification service endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.77,
+    "retries": 0,
+    "timestamp": 1753493709724,
+    "date": "2025-07-26T01:35:09.724Z"
+  },
+  {
+    "test_name": "API002: Test user registration endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.372,
+    "retries": 0,
+    "timestamp": 1753493710335,
+    "date": "2025-07-26T01:35:10.335Z"
+  },
+  {
+    "test_name": "API007: Test user profile update endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.03,
+    "retries": 0,
+    "timestamp": 1753493710927,
+    "date": "2025-07-26T01:35:10.927Z"
+  },
+  {
+    "test_name": "API003: Test product listing endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.905,
+    "retries": 0,
+    "timestamp": 1753493710947,
+    "date": "2025-07-26T01:35:10.947Z"
+  },
+  {
+    "test_name": "API004: Test order creation endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 8.52,
+    "retries": 0,
+    "timestamp": 1753493712677,
+    "date": "2025-07-26T01:35:12.677Z"
+  },
+  {
+    "test_name": "API005: Test payment processing endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 9.234,
+    "retries": 0,
+    "timestamp": 1753493713384,
+    "date": "2025-07-26T01:35:13.384Z"
+  },
+  {
+    "test_name": "EC002: Add product to shopping cart",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.881,
+    "retries": 0,
+    "timestamp": 1753493715226,
+    "date": "2025-07-26T01:35:15.226Z"
+  },
+  {
+    "test_name": "EC001: Browse product catalog",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.772,
+    "retries": 0,
+    "timestamp": 1753493715505,
+    "date": "2025-07-26T01:35:15.505Z"
+  },
+  {
+    "test_name": "EC004: Search for products",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.64,
+    "retries": 0,
+    "timestamp": 1753493715602,
+    "date": "2025-07-26T01:35:15.602Z"
+  },
+  {
+    "test_name": "API009: Test file upload endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.89,
+    "retries": 0,
+    "timestamp": 1753493715988,
+    "date": "2025-07-26T01:35:15.988Z"
+  },
+  {
+    "test_name": "API010: Test data export endpoint",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.496,
+    "retries": 0,
+    "timestamp": 1753493717169,
+    "date": "2025-07-26T01:35:17.169Z"
+  },
+  {
+    "test_name": "EC005: Apply discount coupon",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.888,
+    "retries": 0,
+    "timestamp": 1753493717577,
+    "date": "2025-07-26T01:35:17.577Z"
+  },
+  {
+    "test_name": "EC006: Track order status",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.992,
+    "retries": 0,
+    "timestamp": 1753493718385,
+    "date": "2025-07-26T01:35:18.385Z"
+  },
+  {
+    "test_name": "EC008: Create wishlist",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.287,
+    "retries": 0,
+    "timestamp": 1753493718795,
+    "date": "2025-07-26T01:35:18.795Z"
+  },
+  {
+    "test_name": "TS1TC2: should show Page Object Model article",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 1.459,
+    "retries": 0,
+    "timestamp": 1753493719043,
+    "date": "2025-07-26T01:35:19.043Z"
+  },
+  {
+    "test_name": "TS1TC1: getting started should contain table of contents",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 1.991,
+    "retries": 0,
+    "timestamp": 1753493719170,
+    "date": "2025-07-26T01:35:19.170Z"
+  },
+  {
+    "test_name": "TS2TC1: getting started should contain table of contents",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 1.149,
+    "retries": 0,
+    "timestamp": 1753493719545,
+    "date": "2025-07-26T01:35:19.545Z"
+  },
+  {
+    "test_name": "EC010: Subscribe to newsletter",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.213,
+    "retries": 0,
+    "timestamp": 1753493720210,
+    "date": "2025-07-26T01:35:20.210Z"
+  },
+  {
+    "test_name": "EC007: Write product review",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.35,
+    "retries": 0,
+    "timestamp": 1753493721579,
+    "date": "2025-07-26T01:35:21.579Z"
+  },
+  {
+    "test_name": "TS2TC2: should show Page Object Model article",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 2.782,
+    "retries": 0,
+    "timestamp": 1753493721586,
+    "date": "2025-07-26T01:35:21.586Z"
+  },
+  {
+    "test_name": "EC003: Complete checkout process",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 10.704,
+    "retries": 0,
+    "timestamp": 1753493721639,
+    "date": "2025-07-26T01:35:21.639Z"
+  },
+  {
+    "test_name": "EC009: Process return request",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.739,
+    "retries": 0,
+    "timestamp": 1753493722344,
+    "date": "2025-07-26T01:35:22.344Z"
+  },
+  {
+    "test_name": "PERF001: Test page load performance",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.642,
+    "retries": 0,
+    "timestamp": 1753493722694,
+    "date": "2025-07-26T01:35:22.694Z"
+  },
+  {
+    "test_name": "PERF003: Test API response time",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.812,
+    "retries": 0,
+    "timestamp": 1753493723368,
+    "date": "2025-07-26T01:35:23.368Z"
+  },
+  {
+    "test_name": "PERF002: Test database query performance",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.304,
+    "retries": 0,
+    "timestamp": 1753493724485,
+    "date": "2025-07-26T01:35:24.485Z"
+  },
+  {
+    "test_name": "PERF006: Test image optimization performance",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.143,
+    "retries": 0,
+    "timestamp": 1753493725737,
+    "date": "2025-07-26T01:35:25.737Z"
+  },
+  {
+    "test_name": "PERF007: Test caching mechanism performance",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.395,
+    "retries": 0,
+    "timestamp": 1753493726044,
+    "date": "2025-07-26T01:35:26.044Z"
+  },
+  {
+    "test_name": "PERF008: Test search algorithm performance",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.385,
+    "retries": 0,
+    "timestamp": 1753493727740,
+    "date": "2025-07-26T01:35:27.740Z"
+  },
+  {
+    "test_name": "PERF004: Test memory usage under load",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.568,
+    "retries": 0,
+    "timestamp": 1753493727787,
+    "date": "2025-07-26T01:35:27.787Z"
+  },
+  {
+    "test_name": "SEC001: Test SQL injection vulnerability",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.695,
+    "retries": 0,
+    "timestamp": 1753493728194,
+    "date": "2025-07-26T01:35:28.194Z"
+  },
+  {
+    "test_name": "PERF005: Test concurrent user simulation",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.454,
+    "retries": 0,
+    "timestamp": 1753493729042,
+    "date": "2025-07-26T01:35:29.042Z"
+  },
+  {
+    "test_name": "SEC002: Test cross-site scripting (XSS)",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.668,
+    "retries": 0,
+    "timestamp": 1753493729414,
+    "date": "2025-07-26T01:35:29.414Z"
+  },
+  {
+    "test_name": "PERF009: Test file processing performance",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.931,
+    "retries": 0,
+    "timestamp": 1753493729627,
+    "date": "2025-07-26T01:35:29.627Z"
+  },
+  {
+    "test_name": "PERF010: Test network bandwidth utilization",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.364,
+    "retries": 0,
+    "timestamp": 1753493729736,
+    "date": "2025-07-26T01:35:29.736Z"
+  },
+  {
+    "test_name": "SEC003: Test authentication bypass",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.216,
+    "retries": 0,
+    "timestamp": 1753493731268,
+    "date": "2025-07-26T01:35:31.268Z"
+  },
+  {
+    "test_name": "SEC005: Test input validation",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.86,
+    "retries": 0,
+    "timestamp": 1753493731656,
+    "date": "2025-07-26T01:35:31.656Z"
+  },
+  {
+    "test_name": "SEC004: Test session management",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.223,
+    "retries": 0,
+    "timestamp": 1753493731971,
+    "date": "2025-07-26T01:35:31.971Z"
+  },
+  {
+    "test_name": "SEC010: Test security headers",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.453,
+    "retries": 0,
+    "timestamp": 1753493733195,
+    "date": "2025-07-26T01:35:33.195Z"
+  },
+  {
+    "test_name": "SEC007: Test CSRF protection",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.164,
+    "retries": 0,
+    "timestamp": 1753493733215,
+    "date": "2025-07-26T01:35:33.215Z"
+  },
+  {
+    "test_name": "SEC009: Test data encryption",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.78,
+    "retries": 0,
+    "timestamp": 1753493733412,
+    "date": "2025-07-26T01:35:33.412Z"
+  },
+  {
+    "test_name": "SEC006: Test file upload security",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.555,
+    "retries": 0,
+    "timestamp": 1753493733751,
+    "date": "2025-07-26T01:35:33.751Z"
+  },
+  {
+    "test_name": "UM002: Login with valid credentials",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 2.996,
+    "retries": 0,
+    "timestamp": 1753493734663,
+    "date": "2025-07-26T01:35:34.663Z"
+  },
+  {
+    "test_name": "SEC008: Test privilege escalation",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.387,
+    "retries": 0,
+    "timestamp": 1753493734802,
+    "date": "2025-07-26T01:35:34.802Z"
+  },
+  {
+    "test_name": "UM001: Create new user account",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 3.922,
+    "retries": 0,
+    "timestamp": 1753493735201,
+    "date": "2025-07-26T01:35:35.201Z"
+  },
+  {
+    "test_name": "UM006: Reset user password",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.098,
+    "retries": 0,
+    "timestamp": 1753493737517,
+    "date": "2025-07-26T01:35:37.517Z"
+  },
+  {
+    "test_name": "UM004: Change user password",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 5.417,
+    "retries": 0,
+    "timestamp": 1753493738619,
+    "date": "2025-07-26T01:35:38.619Z"
+  },
+  {
+    "test_name": "UM003: Update user profile information",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.142,
+    "retries": 0,
+    "timestamp": 1753493739123,
+    "date": "2025-07-26T01:35:39.123Z"
+  },
+  {
+    "test_name": "UM008: Disable two-factor authentication",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 4.842,
+    "retries": 0,
+    "timestamp": 1753493739509,
+    "date": "2025-07-26T01:35:39.509Z"
+  },
+  {
+    "test_name": "UM005: Delete user account",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.134,
+    "retries": 0,
+    "timestamp": 1753493740358,
+    "date": "2025-07-26T01:35:40.358Z"
+  },
+  {
+    "test_name": "UM007: Enable two-factor authentication",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 7.329,
+    "retries": 0,
+    "timestamp": 1753493741090,
+    "date": "2025-07-26T01:35:41.090Z"
+  },
+  {
+    "test_name": "UM009: Export user data",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.425,
+    "retries": 0,
+    "timestamp": 1753493741235,
+    "date": "2025-07-26T01:35:41.235Z"
+  },
+  {
+    "test_name": "UM010: Block user account",
+    "project": "Web-1",
+    "suite": "Web-1",
+    "status": "passed",
+    "duration_seconds": 6.264,
+    "retries": 0,
+    "timestamp": 1753493741468,
+    "date": "2025-07-26T01:35:41.468Z"
+  },
+  {
+    "test_name": "API001: Test user authentication endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.059,
+    "retries": 0,
+    "timestamp": 1753493746785,
+    "date": "2025-07-26T01:35:46.785Z"
+  },
+  {
+    "test_name": "API002: Test user registration endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.157,
+    "retries": 0,
+    "timestamp": 1753493747919,
+    "date": "2025-07-26T01:35:47.919Z"
+  },
+  {
+    "test_name": "API003: Test product listing endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.057,
+    "retries": 0,
+    "timestamp": 1753493748501,
+    "date": "2025-07-26T01:35:48.501Z"
+  },
+  {
+    "test_name": "API008: Test notification service endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.047,
+    "retries": 0,
+    "timestamp": 1753493749284,
+    "date": "2025-07-26T01:35:49.284Z"
+  },
+  {
+    "test_name": "API006: Test search functionality endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.063,
+    "retries": 0,
+    "timestamp": 1753493749311,
+    "date": "2025-07-26T01:35:49.311Z"
+  },
+  {
+    "test_name": "API004: Test order creation endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 7.12,
+    "retries": 0,
+    "timestamp": 1753493750089,
+    "date": "2025-07-26T01:35:50.089Z"
+  },
+  {
+    "test_name": "API007: Test user profile update endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.232,
+    "retries": 0,
+    "timestamp": 1753493750180,
+    "date": "2025-07-26T01:35:50.180Z"
+  },
+  {
+    "test_name": "API005: Test payment processing endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 8.176,
+    "retries": 0,
+    "timestamp": 1753493752456,
+    "date": "2025-07-26T01:35:52.456Z"
+  },
+  {
+    "test_name": "API009: Test file upload endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.747,
+    "retries": 0,
+    "timestamp": 1753493753536,
+    "date": "2025-07-26T01:35:53.536Z"
+  },
+  {
+    "test_name": "EC002: Add product to shopping cart",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.988,
+    "retries": 0,
+    "timestamp": 1753493754283,
+    "date": "2025-07-26T01:35:54.283Z"
+  },
+  {
+    "test_name": "EC001: Browse product catalog",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.065,
+    "retries": 0,
+    "timestamp": 1753493754577,
+    "date": "2025-07-26T01:35:54.577Z"
+  },
+  {
+    "test_name": "EC004: Search for products",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.608,
+    "retries": 0,
+    "timestamp": 1753493754707,
+    "date": "2025-07-26T01:35:54.707Z"
+  },
+  {
+    "test_name": "EC005: Apply discount coupon",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.977,
+    "retries": 0,
+    "timestamp": 1753493755164,
+    "date": "2025-07-26T01:35:55.164Z"
+  },
+  {
+    "test_name": "API010: Test data export endpoint",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 7.458,
+    "retries": 0,
+    "timestamp": 1753493755379,
+    "date": "2025-07-26T01:35:55.379Z"
+  },
+  {
+    "test_name": "TS1TC2: should show Page Object Model article",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 1.334,
+    "retries": 0,
+    "timestamp": 1753493756725,
+    "date": "2025-07-26T01:35:56.725Z"
+  },
+  {
+    "test_name": "TS1TC1: getting started should contain table of contents",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 1.766,
+    "retries": 0,
+    "timestamp": 1753493756949,
+    "date": "2025-07-26T01:35:56.949Z"
+  },
+  {
+    "test_name": "EC008: Create wishlist",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.168,
+    "retries": 0,
+    "timestamp": 1753493757456,
+    "date": "2025-07-26T01:35:57.456Z"
+  },
+  {
+    "test_name": "EC006: Track order status",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.006,
+    "retries": 0,
+    "timestamp": 1753493757475,
+    "date": "2025-07-26T01:35:57.475Z"
+  },
+  {
+    "test_name": "TS2TC1: getting started should contain table of contents",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 1.119,
+    "retries": 0,
+    "timestamp": 1753493757849,
+    "date": "2025-07-26T01:35:57.849Z"
+  },
+  {
+    "test_name": "EC010: Subscribe to newsletter",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.166,
+    "retries": 0,
+    "timestamp": 1753493758879,
+    "date": "2025-07-26T01:35:58.879Z"
+  },
+  {
+    "test_name": "TS2TC2: should show Page Object Model article",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 2.824,
+    "retries": 0,
+    "timestamp": 1753493759776,
+    "date": "2025-07-26T01:35:59.776Z"
+  },
+  {
+    "test_name": "EC007: Write product review",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.3,
+    "retries": 0,
+    "timestamp": 1753493759851,
+    "date": "2025-07-26T01:35:59.851Z"
+  },
+  {
+    "test_name": "EC003: Complete checkout process",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 10.655,
+    "retries": 0,
+    "timestamp": 1753493759978,
+    "date": "2025-07-26T01:35:59.978Z"
+  },
+  {
+    "test_name": "PERF001: Test page load performance",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.64,
+    "retries": 0,
+    "timestamp": 1753493761130,
+    "date": "2025-07-26T01:36:01.130Z"
+  },
+  {
+    "test_name": "EC009: Process return request",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.78,
+    "retries": 0,
+    "timestamp": 1753493761365,
+    "date": "2025-07-26T01:36:01.365Z"
+  },
+  {
+    "test_name": "PERF003: Test API response time",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.806,
+    "retries": 0,
+    "timestamp": 1753493761666,
+    "date": "2025-07-26T01:36:01.666Z"
+  },
+  {
+    "test_name": "PERF002: Test database query performance",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.374,
+    "retries": 0,
+    "timestamp": 1753493762866,
+    "date": "2025-07-26T01:36:02.866Z"
+  },
+  {
+    "test_name": "PERF006: Test image optimization performance",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.125,
+    "retries": 0,
+    "timestamp": 1753493763985,
+    "date": "2025-07-26T01:36:03.985Z"
+  },
+  {
+    "test_name": "PERF007: Test caching mechanism performance",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.39,
+    "retries": 0,
+    "timestamp": 1753493764379,
+    "date": "2025-07-26T01:36:04.379Z"
+  },
+  {
+    "test_name": "PERF004: Test memory usage under load",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 7.457,
+    "retries": 0,
+    "timestamp": 1753493766343,
+    "date": "2025-07-26T01:36:06.343Z"
+  },
+  {
+    "test_name": "PERF008: Test search algorithm performance",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.339,
+    "retries": 0,
+    "timestamp": 1753493766472,
+    "date": "2025-07-26T01:36:06.472Z"
+  },
+  {
+    "test_name": "SEC001: Test SQL injection vulnerability",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.812,
+    "retries": 0,
+    "timestamp": 1753493766688,
+    "date": "2025-07-26T01:36:06.688Z"
+  },
+  {
+    "test_name": "PERF005: Test concurrent user simulation",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 7.405,
+    "retries": 0,
+    "timestamp": 1753493767189,
+    "date": "2025-07-26T01:36:07.189Z"
+  },
+  {
+    "test_name": "SEC002: Test cross-site scripting (XSS)",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.769,
+    "retries": 0,
+    "timestamp": 1753493767760,
+    "date": "2025-07-26T01:36:07.760Z"
+  },
+  {
+    "test_name": "PERF010: Test network bandwidth utilization",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.309,
+    "retries": 0,
+    "timestamp": 1753493767977,
+    "date": "2025-07-26T01:36:07.977Z"
+  },
+  {
+    "test_name": "PERF009: Test file processing performance",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.879,
+    "retries": 0,
+    "timestamp": 1753493768253,
+    "date": "2025-07-26T01:36:08.253Z"
+  },
+  {
+    "test_name": "SEC003: Test authentication bypass",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.161,
+    "retries": 0,
+    "timestamp": 1753493769549,
+    "date": "2025-07-26T01:36:09.549Z"
+  },
+  {
+    "test_name": "SEC005: Test input validation",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.915,
+    "retries": 0,
+    "timestamp": 1753493770394,
+    "date": "2025-07-26T01:36:10.394Z"
+  },
+  {
+    "test_name": "SEC004: Test session management",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.169,
+    "retries": 0,
+    "timestamp": 1753493770518,
+    "date": "2025-07-26T01:36:10.518Z"
+  },
+  {
+    "test_name": "SEC007: Test CSRF protection",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.231,
+    "retries": 0,
+    "timestamp": 1753493771430,
+    "date": "2025-07-26T01:36:11.430Z"
+  },
+  {
+    "test_name": "SEC010: Test security headers",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.447,
+    "retries": 0,
+    "timestamp": 1753493771709,
+    "date": "2025-07-26T01:36:11.709Z"
+  },
+  {
+    "test_name": "SEC009: Test data encryption",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.758,
+    "retries": 0,
+    "timestamp": 1753493771743,
+    "date": "2025-07-26T01:36:11.743Z"
+  },
+  {
+    "test_name": "SEC006: Test file upload security",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.664,
+    "retries": 0,
+    "timestamp": 1753493772355,
+    "date": "2025-07-26T01:36:12.355Z"
+  },
+  {
+    "test_name": "SEC008: Test privilege escalation",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.375,
+    "retries": 0,
+    "timestamp": 1753493773138,
+    "date": "2025-07-26T01:36:13.138Z"
+  },
+  {
+    "test_name": "UM001: Create new user account",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 3.783,
+    "retries": 0,
+    "timestamp": 1753493773340,
+    "date": "2025-07-26T01:36:13.340Z"
+  },
+  {
+    "test_name": "UM002: Login with valid credentials",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 2.986,
+    "retries": 0,
+    "timestamp": 1753493773388,
+    "date": "2025-07-26T01:36:13.388Z"
+  },
+  {
+    "test_name": "UM006: Reset user password",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.057,
+    "retries": 0,
+    "timestamp": 1753493775806,
+    "date": "2025-07-26T01:36:15.806Z"
+  },
+  {
+    "test_name": "UM004: Change user password",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 5.408,
+    "retries": 0,
+    "timestamp": 1753493776845,
+    "date": "2025-07-26T01:36:16.845Z"
+  },
+  {
+    "test_name": "UM003: Update user profile information",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 7.088,
+    "retries": 0,
+    "timestamp": 1753493777617,
+    "date": "2025-07-26T01:36:17.617Z"
+  },
+  {
+    "test_name": "UM008: Disable two-factor authentication",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 4.885,
+    "retries": 0,
+    "timestamp": 1753493778030,
+    "date": "2025-07-26T01:36:18.030Z"
+  },
+  {
+    "test_name": "UM005: Delete user account",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 7.065,
+    "retries": 0,
+    "timestamp": 1753493778781,
+    "date": "2025-07-26T01:36:18.781Z"
+  },
+  {
+    "test_name": "UM010: Block user account",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.214,
+    "retries": 0,
+    "timestamp": 1753493779605,
+    "date": "2025-07-26T01:36:19.605Z"
+  },
+  {
+    "test_name": "UM007: Enable two-factor authentication",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 7.276,
+    "retries": 0,
+    "timestamp": 1753493779639,
+    "date": "2025-07-26T01:36:19.639Z"
+  },
+  {
+    "test_name": "UM009: Export user data",
+    "project": "Web-2",
+    "suite": "Web-2",
+    "status": "passed",
+    "duration_seconds": 6.401,
+    "retries": 0,
+    "timestamp": 1753493779743,
+    "date": "2025-07-26T01:36:19.743Z"
+  }
+]
