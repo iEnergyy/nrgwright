@@ -3,7 +3,7 @@ import axios from 'axios';
 import { config } from 'dotenv';
 
 // Load environment variables
-config({ path: './config.env' });
+config({ path: './.env' });
 
 interface TestMetric {
   test_name: string;
@@ -15,17 +15,59 @@ interface TestMetric {
   timestamp: number;
 }
 
+interface OTLPMetric {
+  resourceMetrics: Array<{
+    scopeMetrics: Array<{
+      metrics: Array<{
+        name: string;
+        unit: string;
+        description: string;
+        gauge?: {
+          dataPoints: Array<{
+            asInt?: number;
+            asDouble?: number;
+            timeUnixNano: number;
+            attributes: Array<{
+              key: string;
+              value: {
+                stringValue?: string;
+                intValue?: number;
+                doubleValue?: number;
+              };
+            }>;
+          }>;
+        };
+        sum?: {
+          dataPoints: Array<{
+            asInt?: number;
+            asDouble?: number;
+            timeUnixNano: number;
+            attributes: Array<{
+              key: string;
+              value: {
+                stringValue?: string;
+                intValue?: number;
+                doubleValue?: number;
+              };
+            }>;
+          }>;
+        };
+      }>;
+    }>;
+  }>;
+}
+
 class DirectMetricsReporter implements Reporter {
-  private grafanaUrl: string;
-  private apiKey: string;
+  private otlpUrl: string;
+  private prometheusToken: string;
   private metrics: TestMetric[] = [];
 
   constructor() {
-    this.grafanaUrl = process.env.GRAFANA_CLOUD_URL || '';
-    this.apiKey = process.env.GRAFANA_CLOUD_API_KEY || '';
+    this.otlpUrl = 'https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/metrics';
+    this.prometheusToken = process.env.PROMETHEUS_TOKEN || '';
 
-    if (!this.grafanaUrl || !this.apiKey) {
-      console.warn('⚠️  Grafana Cloud credentials not configured. Metrics will not be sent.');
+    if (!this.prometheusToken) {
+      console.warn('⚠️  Prometheus token not configured. Metrics will not be sent.');
     }
   }
 
@@ -48,39 +90,43 @@ class DirectMetricsReporter implements Reporter {
     console.log(`\n🎯 Test execution completed!`);
     console.log(`📊 Total tests recorded: ${this.metrics.length}`);
 
-    if (this.grafanaUrl && this.apiKey) {
+    if (this.prometheusToken) {
       await this.sendMetricsToGrafana();
     } else {
-      console.log('📈 Metrics collected but not sent (no Grafana credentials)');
-      console.log('💡 Add GRAFANA_CLOUD_URL and GRAFANA_CLOUD_API_KEY to config.env');
+      console.log('📈 Metrics collected but not sent (no Prometheus token)');
+      console.log('💡 Add PROMETHEUS_TOKEN to .env');
     }
   }
 
   private async sendMetricsToGrafana() {
     try {
-      // Send metrics as Prometheus remote write format
-      const prometheusMetrics = this.convertToPrometheusFormat();
+      // Convert to OTLP format
+      const otlpMetrics = this.convertToOTLPFormat();
 
       const response = await axios.post(
-        `${this.grafanaUrl}/api/prom/push`,
-        prometheusMetrics,
+        this.otlpUrl,
+        otlpMetrics,
         {
           headers: {
-            'Content-Type': 'text/plain',
-            'Authorization': `Bearer ${this.apiKey}`
+            'Content-Type': 'application/json',
+            'Authorization': `Basic ${Buffer.from(`1328463:${this.prometheusToken}`).toString('base64')}`
           }
         }
       );
 
-      console.log('✅ Metrics sent to Grafana Cloud successfully!');
-      console.log(`📈 View in Grafana Cloud: ${this.grafanaUrl}`);
+      console.log('✅ Metrics sent to Grafana Cloud OTLP endpoint successfully!');
+      console.log(`📈 View in Grafana Cloud: https://ienergyy.grafana.net`);
     } catch (error) {
       console.error('❌ Failed to send metrics to Grafana Cloud:', error.message);
+      if (error.response) {
+        console.error('Response status:', error.response.status);
+        console.error('Response data:', error.response.data);
+      }
     }
   }
 
-  private convertToPrometheusFormat(): string {
-    let prometheusData = '';
+  private convertToOTLPFormat(): OTLPMetric {
+    const now = Date.now() * 1000000; // Convert to nanoseconds
 
     // Group metrics by type
     const testResults = this.metrics.reduce((acc, metric) => {
@@ -96,19 +142,93 @@ class DirectMetricsReporter implements Reporter {
       return acc;
     }, {} as Record<string, number[]>);
 
-    // Convert to Prometheus format
+    const metrics: Array<{
+      name: string;
+      unit: string;
+      description: string;
+      gauge?: {
+        dataPoints: Array<{
+          asInt?: number;
+          asDouble?: number;
+          timeUnixNano: number;
+          attributes: Array<{
+            key: string;
+            value: {
+              stringValue?: string;
+              intValue?: number;
+              doubleValue?: number;
+            };
+          }>;
+        }>;
+      };
+      sum?: {
+        dataPoints: Array<{
+          asInt?: number;
+          asDouble?: number;
+          timeUnixNano: number;
+          attributes: Array<{
+            key: string;
+            value: {
+              stringValue?: string;
+              intValue?: number;
+              doubleValue?: number;
+            };
+          }>;
+        }>;
+      };
+    }> = [];
+
+    // Add test results as gauge metrics
     Object.entries(testResults).forEach(([key, value]) => {
       const [project, suite, testName, status] = key.split('_');
-      prometheusData += `playwright_test_results_total{project="${project}",suite="${suite}",test_name="${testName}",status="${status}"} ${value}\n`;
+      metrics.push({
+        name: 'playwright_test_results_total',
+        unit: '1',
+        description: 'Total number of test results by status',
+        gauge: {
+          dataPoints: [{
+            asInt: value,
+            timeUnixNano: now,
+            attributes: [
+              { key: 'project', value: { stringValue: project } },
+              { key: 'suite', value: { stringValue: suite } },
+              { key: 'test_name', value: { stringValue: testName } },
+              { key: 'status', value: { stringValue: status } }
+            ]
+          }]
+        }
+      });
     });
 
+    // Add test durations as gauge metrics
     Object.entries(testDurations).forEach(([key, durations]) => {
       const [project, suite, testName] = key.split('_');
       const avgDuration = durations.reduce((a, b) => a + b, 0) / durations.length;
-      prometheusData += `playwright_test_duration_seconds{project="${project}",suite="${suite}",test_name="${testName}"} ${avgDuration}\n`;
+      metrics.push({
+        name: 'playwright_test_duration_seconds',
+        unit: 's',
+        description: 'Average test duration in seconds',
+        gauge: {
+          dataPoints: [{
+            asDouble: avgDuration,
+            timeUnixNano: now,
+            attributes: [
+              { key: 'project', value: { stringValue: project } },
+              { key: 'suite', value: { stringValue: suite } },
+              { key: 'test_name', value: { stringValue: testName } }
+            ]
+          }]
+        }
+      });
     });
 
-    return prometheusData;
+    return {
+      resourceMetrics: [{
+        scopeMetrics: [{
+          metrics
+        }]
+      }]
+    };
   }
 
   private extractSuiteName(titlePath: string[]): string {

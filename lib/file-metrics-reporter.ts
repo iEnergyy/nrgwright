@@ -4,7 +4,7 @@ import path from 'path';
 import { config } from 'dotenv';
 
 // Load environment variables
-config({ path: './config.env' });
+config({ path: './.env' });
 
 interface TestMetric {
   test_name: string;

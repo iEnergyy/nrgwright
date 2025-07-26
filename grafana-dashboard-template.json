@@ -1,0 +1,151 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Playwright Test Metrics",
+    "tags": ["playwright", "testing", "metrics"],
+    "style": "dark",
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Test Pass Rate",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "rate(playwright_test_results_total{status=\"passed\"}[5m]) / rate(playwright_test_results_total[5m]) * 100",
+            "legendFormat": "Pass Rate"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {"color": "red", "value": null},
+                {"color": "yellow", "value": 80},
+                {"color": "green", "value": 95}
+              ]
+            },
+            "unit": "percent"
+          }
+        },
+        "gridPos": {"h": 8, "w": 6, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Total Tests",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "sum(playwright_test_results_total)",
+            "legendFormat": "Total Tests"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"},
+            "unit": "short"
+          }
+        },
+        "gridPos": {"h": 8, "w": 6, "x": 6, "y": 0}
+      },
+      {
+        "id": 3,
+        "title": "Average Test Duration",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "avg(playwright_test_duration_seconds)",
+            "legendFormat": "Avg Duration"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"},
+            "unit": "s"
+          }
+        },
+        "gridPos": {"h": 8, "w": 6, "x": 12, "y": 0}
+      },
+      {
+        "id": 4,
+        "title": "Test Duration by Project",
+        "type": "timeseries",
+        "targets": [
+          {
+            "expr": "playwright_test_duration_seconds",
+            "legendFormat": "{{project}} - {{test_name}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"},
+            "unit": "s"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8}
+      },
+      {
+        "id": 5,
+        "title": "Tests by Status",
+        "type": "piechart",
+        "targets": [
+          {
+            "expr": "sum(playwright_test_results_total) by (status)",
+            "legendFormat": "{{status}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"}
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8}
+      },
+      {
+        "id": 6,
+        "title": "Top 10 Slowest Tests",
+        "type": "table",
+        "targets": [
+          {
+            "expr": "topk(10, playwright_test_duration_seconds)",
+            "format": "table",
+            "instant": true
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"},
+            "unit": "s"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 16}
+      },
+      {
+        "id": 7,
+        "title": "Performance by Project",
+        "type": "barchart",
+        "targets": [
+          {
+            "expr": "avg(playwright_test_duration_seconds) by (project)",
+            "legendFormat": "{{project}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {"mode": "palette-classic"},
+            "unit": "s"
+          }
+        },
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 16}
+      }
+    ],
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "refresh": "30s"
+  }
+} 

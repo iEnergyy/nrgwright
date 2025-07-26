@@ -8,6 +8,7 @@
     "test:with-metrics": "npx playwright test --reporter=lib/file-metrics-reporter.ts",
     "send-metrics": "node lib/send-metrics-to-grafana.js",
     "analyze-metrics": "node lib/analyze-metrics.js",
+    "test-grafana": "node lib/test-grafana-connection.js",
     "allure:report": "npx allure serve allure-results",
     "server": "node server/app.js"
   },
