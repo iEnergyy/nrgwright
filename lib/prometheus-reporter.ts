@@ -8,6 +8,7 @@ import * as path from 'path';
 class PrometheusReporter implements Reporter {
   private registry: client.Registry;
   private durationHistogram: client.Histogram;
+  private retryCounter: client.Counter;
   private gateway: any = null;
 
   constructor() {
@@ -20,7 +21,14 @@ class PrometheusReporter implements Reporter {
       buckets: [0.1, 0.5, 1, 2, 5, 10],
     });
 
+    this.retryCounter = new client.Counter({
+      name: 'playwright_test_retry_total',
+      help: 'Number of times a test was retried',
+      labelNames: ['test', 'project'],
+    });
+
     this.registry.registerMetric(this.durationHistogram);
+    this.registry.registerMetric(this.retryCounter);
     client.collectDefaultMetrics({ register: this.registry });
   }
 
@@ -35,6 +43,7 @@ class PrometheusReporter implements Reporter {
       } catch (error) {
         console.warn('⚠️ Could not get project name from metadata');
       }
+      console.log(`📊 Recording metrics for test "${test.title}" in project "${projectName}"`);
 
       const labels = {
         test: test.title || 'unknown',
@@ -43,9 +52,9 @@ class PrometheusReporter implements Reporter {
       };
 
       this.durationHistogram.observe(labels, durationSeconds);
-
-      console.log(`📊 Recording metrics for test "${test.title}" in project "${projectName}"`);
-
+      if (result.retry > 0) {
+        this.retryCounter.inc({ test: test.title, project: projectName });
+      }
     } catch (error) {
       console.error('❌ Error recording test metrics:', error);
     }
