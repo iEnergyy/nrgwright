@@ -9,10 +9,16 @@ class PrometheusReporter implements Reporter {
   private registry: client.Registry;
   private durationHistogram: client.Histogram;
   private retryCounter: client.Counter;
+  private dailyRunsCounter: client.Counter;
   private gateway: any = null;
+  private runDate: string;
+  private projectName: string = 'default';
 
   constructor() {
     this.registry = new client.Registry();
+
+    // Get current date for daily runs tracking
+    this.runDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
 
     this.durationHistogram = new client.Histogram({
       name: 'playwright_test_duration_seconds',
@@ -27,8 +33,15 @@ class PrometheusReporter implements Reporter {
       labelNames: ['test', 'project'],
     });
 
+    this.dailyRunsCounter = new client.Counter({
+      name: 'playwright_daily_runs_total',
+      help: 'Number of test runs per day',
+      labelNames: ['date', 'project'],
+    });
+
     this.registry.registerMetric(this.durationHistogram);
     this.registry.registerMetric(this.retryCounter);
+    this.registry.registerMetric(this.dailyRunsCounter);
     client.collectDefaultMetrics({ register: this.registry });
   }
 
@@ -40,6 +53,8 @@ class PrometheusReporter implements Reporter {
       let projectName = 'default';
       try {
         projectName = test.parent.project().name;
+        // Store the project name for daily runs counter
+        this.projectName = projectName;
       } catch (error) {
         console.warn('⚠️ Could not get project name from metadata');
       }
@@ -62,6 +77,18 @@ class PrometheusReporter implements Reporter {
 
   async onEnd(result: FullResult): Promise<void> {
     try {
+      // Increment daily runs counter for this test run
+      try {
+        this.dailyRunsCounter.inc({
+          date: this.runDate,
+          project: this.projectName
+        });
+
+        console.log(`📅 Incremented daily runs counter for ${this.runDate} in project ${this.projectName}`);
+      } catch (error) {
+        console.warn('⚠️ Could not increment daily runs counter:', error);
+      }
+
       // 📊 Print human-readable Prometheus metrics output
       const metricsText = await this.registry.metrics();
       console.log('📊 Prometheus Metrics Preview:\n', metricsText);
