@@ -1,18 +1,19 @@
-import { InfluxDB, Point } from '@influxdata/influxdb-client';
+import { InfluxDBClient, Point } from '@influxdata/influxdb3-client';
+import dotenv from 'dotenv';
 
-const url = process.env.INFLUX_URL!;
-const token = process.env.INFLUX_TOKEN!;
-const org = process.env.INFLUX_ORG!;
-const bucket = process.env.INFLUX_BUCKET!;
+dotenv.config();
 
-const client = new InfluxDB({ url, token });
-const writeApi = client.getWriteApi(org, bucket, 'ns');
+const token = process.env.INFLUX_TOKEN || 'Token not found';
+const bucket = 'nrgwright';
+
+// Create connection string for the new client
+const client = new InfluxDBClient({ host: 'https://us-east-1-1.aws.cloud2.influxdata.com', token: token, database: bucket });
 
 export function writePoint(point: Point) {
-  writeApi.writePoint(point);
+  client.write(point);
 }
 
 // flush before exit
 export async function flushMetrics() {
-  await writeApi.close();
+  await client.close();
 }
